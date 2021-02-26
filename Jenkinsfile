@@ -20,16 +20,19 @@ pipeline {
         
     }
 
-    stage('nodex-push docker hub') {
+
+    stage('nodex-docker_push ') {
             steps {
-
-            script{
-
-            echo "customImage"
-    }
-       }         
-            }
+                script{
+                  
+                  imageid="nodex:${env.BUILD_ID}"
+                  name="nodeapp${env.BUILD_ID}"
+                  sh "echo $imageid"
+                
+                }
         }
+        
+    }
     
 }
 }
