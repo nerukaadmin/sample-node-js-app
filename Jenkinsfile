@@ -27,7 +27,11 @@ pipeline {
                   
                   imageid="nodex:${env.BUILD_ID}"
                   name="nodeapp${env.BUILD_ID}"
-                  sh "echo $imageid"
+                  
+                  docker.withRegistry('https://hub.docker.com/', 'nerukaneox') {
+
+                  customImage.push()
+    }
                 
                 }
         }
