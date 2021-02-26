@@ -19,6 +19,17 @@ pipeline {
         }
         
     }
+
+    stage('nodex-push docker hub') {
+            steps {
+
+            script{
+
+            echo "customImage"
+    }
+       }         
+            }
+        }
     
 }
 }
